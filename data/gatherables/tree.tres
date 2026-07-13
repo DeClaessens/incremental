@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Gatherable" format=3 uid="uid://ybmpm222vdqy"]
+
+[ext_resource type="Script" uid="uid://b1k1wrlooja0j" path="res://item.gd" id="1_yv0rc"]
+[ext_resource type="Script" uid="uid://ckrxdmuxj1ret" path="res://gatherable.gd" id="2_y7fey"]
+
+[resource]
+script = ExtResource("2_y7fey")
+metadata/_custom_type_script = "uid://ckrxdmuxj1ret"

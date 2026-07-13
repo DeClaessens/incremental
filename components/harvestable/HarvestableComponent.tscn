@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8oxweyt2ln5i"]
+
+[ext_resource type="Script" uid="uid://cnsf41fdlt774" path="res://components/harvestable/harvestable_component.gd" id="1_v4cud"]
+
+[node name="HarvestableComponent" type="Node2D" unique_id=1965620527]
+script = ExtResource("1_v4cud")
+
+[node name="HintBox" type="HBoxContainer" parent="." unique_id=807520458]
+unique_name_in_owner = true
+visible = false
+offset_left = -12.0
+offset_top = -66.0
+offset_right = 12.0
+offset_bottom = -30.0
+
+[node name="Label" type="Label" parent="HintBox" unique_id=1777160056]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 26
+text = "E"

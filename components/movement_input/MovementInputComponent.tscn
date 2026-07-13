@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4u2mdidnrcw5"]
+
+[ext_resource type="Script" uid="uid://cavhn6kxvik0m" path="res://components/movement_input/movement_input_component.gd" id="1_x4evt"]
+
+[node name="InputComponent" type="Node2D" unique_id=42552125]
+script = ExtResource("1_x4evt")

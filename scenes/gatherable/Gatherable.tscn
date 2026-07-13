@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ywfbuwi43o3m"]
+
+[ext_resource type="Script" uid="uid://ddjobk4q1w3oy" path="res://scenes/gatherable/gatherable.gd" id="1_exqdy"]
+[ext_resource type="PackedScene" uid="uid://jcei30c6p2dt" path="res://components/resources/ResourcesComponent.tscn" id="2_7x6od"]
+[ext_resource type="Resource" uid="uid://dgtmuaex7li0b" path="res://data/gatherables/mushroom.tres" id="2_ddu15"]
+[ext_resource type="PackedScene" uid="uid://8oxweyt2ln5i" path="res://components/harvestable/HarvestableComponent.tscn" id="5_741qs"]
+
+[node name="Gatherable" type="Node2D" unique_id=1782607159 node_paths=PackedStringArray("harvestableComponent", "resourceComponent")]
+script = ExtResource("1_exqdy")
+gatherable = ExtResource("2_ddu15")
+harvestableComponent = NodePath("HarvestableComponent")
+resourceComponent = NodePath("ResourceComponent")
+
+[node name="ResourceComponent" parent="." unique_id=2000883103 instance=ExtResource("2_7x6od")]
+
+[node name="HarvestableComponent" parent="." unique_id=1965620527 instance=ExtResource("5_741qs")]

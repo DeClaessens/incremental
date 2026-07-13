@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://67tcpy8eb4ly"]
+
+[ext_resource type="Texture2D" uid="uid://dp1lfgcdtru26" path="res://icon.svg" id="1_wr5hl"]
+[ext_resource type="PackedScene" uid="uid://4u2mdidnrcw5" path="res://components/movement_input/MovementInputComponent.tscn" id="2_4kuee"]
+[ext_resource type="PackedScene" uid="uid://domf0eox5t28a" path="res://components/movement/MovementComponent.tscn" id="3_524rm"]
+[ext_resource type="Script" uid="uid://d2mrpahmwxn0l" path="res://scenes/player/character_stats.gd" id="3_tpg5x"]
+
+[sub_resource type="Resource" id="Resource_6nll1"]
+script = ExtResource("3_tpg5x")
+metadata/_custom_type_script = "uid://d2mrpahmwxn0l"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eae6q"]
+size = Vector2(42, 42)
+
+[node name="Player" type="CharacterBody2D" unique_id=385618123]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1894765434]
+scale = Vector2(0.328125, 0.328125)
+texture = ExtResource("1_wr5hl")
+
+[node name="InputComponent" parent="." unique_id=42552125 node_paths=PackedStringArray("character") instance=ExtResource("2_4kuee")]
+character = NodePath("..")
+character_stats = SubResource("Resource_6nll1")
+
+[node name="MovementComponent" parent="." unique_id=627195673 node_paths=PackedStringArray("character") instance=ExtResource("3_524rm")]
+character = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1945369672]
+shape = SubResource("RectangleShape2D_eae6q")

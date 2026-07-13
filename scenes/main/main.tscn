@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cvftf7464kqju"]
+
+[ext_resource type="Script" uid="uid://dn2s1ulwjoh2t" path="res://scenes/main/main.gd" id="1_iuonh"]
+[ext_resource type="PackedScene" uid="uid://67tcpy8eb4ly" path="res://scenes/player/Player.tscn" id="2_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://dods7pqbvu6y0" path="res://scenes/world/World.tscn" id="3_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://ywfbuwi43o3m" path="res://scenes/gatherable/Gatherable.tscn" id="4_l3cfh"]
+
+[node name="Node2D" type="Node2D" unique_id=1378053686]
+script = ExtResource("1_iuonh")
+
+[node name="World" parent="." unique_id=685024287 instance=ExtResource("3_k2fmo")]
+
+[node name="Player" parent="." unique_id=94335809 instance=ExtResource("2_k2fmo")]
+position = Vector2(689, 201)
+
+[node name="Gatherable" parent="." unique_id=384069494 instance=ExtResource("4_l3cfh")]
+position = Vector2(950, 253)
