@@ -12,13 +12,10 @@ func _ready() -> void:
 	resourceComponent.resource_depleted.connect(_on_resource_depleted)
 	
 func prepare() -> Area2D:
-	print(self)
-	print(gatherableResource)
 	resourceComponent.resources = gatherableResource.items
 	var instance: StaticBody2D = gatherableResource.scene.instantiate()
 	add_child(instance)
-	return instance.get_node('Area2D')
-	
+	return instance.get_node('DetectionBox')
 	
 func _on_body_entered(node: Node) -> void:
 	if _is_node_a_character(node):

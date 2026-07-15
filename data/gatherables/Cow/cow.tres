@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GatherableResource" format=3 uid="uid://0gmmkfmmwyrs"]
+
+[ext_resource type="Script" uid="uid://b1k1wrlooja0j" path="res://item.gd" id="1_mrldc"]
+[ext_resource type="Script" uid="uid://ckrxdmuxj1ret" path="res://gatherable_resource.gd" id="2_a4teu"]
+[ext_resource type="Resource" uid="uid://bih6jkdaxpcfs" path="res://data/items/milk.tres" id="2_uupwv"]
+[ext_resource type="PackedScene" uid="uid://gdnpdplidbam" path="res://data/gatherables/Cow/Cow.tscn" id="3_tvhjl"]
+
+[resource]
+script = ExtResource("2_a4teu")
+name = "Cow"
+items = Array[ExtResource("1_mrldc")]([ExtResource("2_uupwv")])
+scene = ExtResource("3_tvhjl")
+metadata/_custom_type_script = "uid://ckrxdmuxj1ret"

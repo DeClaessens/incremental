@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b1k1wrlooja0j" path="res://item.gd" id="1_yv0rc"]
 [ext_resource type="Resource" uid="uid://rpa5y8tlw37t" path="res://data/items/wood.tres" id="2_g5tga"]
-[ext_resource type="PackedScene" uid="uid://ddhr2itqea0ia" path="res://scenes/gatherables_entities/tree/Tree.tscn" id="2_sg4e6"]
+[ext_resource type="PackedScene" uid="uid://b1byi236kvpov" path="res://data/gatherables/Tree/Tree.tscn" id="2_sg4e6"]
 [ext_resource type="Script" uid="uid://ckrxdmuxj1ret" path="res://gatherable_resource.gd" id="2_y7fey"]
 
 [resource]
