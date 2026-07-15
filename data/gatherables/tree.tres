@@ -1,8 +1,13 @@
-[gd_resource type="Resource" script_class="Gatherable" format=3 uid="uid://ybmpm222vdqy"]
+[gd_resource type="Resource" script_class="GatherableResource" format=3 uid="uid://ybmpm222vdqy"]
 
 [ext_resource type="Script" uid="uid://b1k1wrlooja0j" path="res://item.gd" id="1_yv0rc"]
-[ext_resource type="Script" uid="uid://ckrxdmuxj1ret" path="res://gatherable.gd" id="2_y7fey"]
+[ext_resource type="Resource" uid="uid://rpa5y8tlw37t" path="res://data/items/wood.tres" id="2_g5tga"]
+[ext_resource type="PackedScene" uid="uid://ddhr2itqea0ia" path="res://scenes/gatherables_entities/tree/Tree.tscn" id="2_sg4e6"]
+[ext_resource type="Script" uid="uid://ckrxdmuxj1ret" path="res://gatherable_resource.gd" id="2_y7fey"]
 
 [resource]
 script = ExtResource("2_y7fey")
+name = "Tree"
+items = Array[ExtResource("1_yv0rc")]([ExtResource("2_g5tga")])
+scene = ExtResource("2_sg4e6")
 metadata/_custom_type_script = "uid://ckrxdmuxj1ret"

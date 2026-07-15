@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="Gatherable" format=3 uid="uid://dgtmuaex7li0b"]
+[gd_resource type="Resource" script_class="GatherableResource" format=3 uid="uid://dgtmuaex7li0b"]
 
 [ext_resource type="Script" uid="uid://b1k1wrlooja0j" path="res://item.gd" id="1_mmhpc"]
 [ext_resource type="Resource" uid="uid://c36f7hfto65t3" path="res://data/items/mushroom.tres" id="2_ham7l"]
 [ext_resource type="PackedScene" uid="uid://bewrmr4pwh2g1" path="res://scenes/gatherables_entities/mushroom/Mushroom.tscn" id="2_i7yvx"]
-[ext_resource type="Script" uid="uid://ckrxdmuxj1ret" path="res://gatherable.gd" id="2_vp2ta"]
+[ext_resource type="Script" uid="uid://ckrxdmuxj1ret" path="res://gatherable_resource.gd" id="4_ham7l"]
 
 [resource]
-script = ExtResource("2_vp2ta")
+script = ExtResource("4_ham7l")
 name = "Mushroom"
 items = Array[ExtResource("1_mmhpc")]([ExtResource("2_ham7l")])
 scene = ExtResource("2_i7yvx")

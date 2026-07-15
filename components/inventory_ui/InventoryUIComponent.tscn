@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://w7k6y4pt0vnb"]
+
+[ext_resource type="Script" uid="uid://ctseg1uedyl1" path="res://components/inventory_ui/inventory_ui_component.gd" id="1_q8vnb"]
+
+[node name="InventoryUiComponent" type="CanvasLayer" unique_id=846424415]
+visible = false
+script = ExtResource("1_q8vnb")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1631244292]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=972423312]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/HBoxContainer" unique_id=1831986476]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 5

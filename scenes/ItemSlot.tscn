@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://fsqua2uy61ct"]
+
+[ext_resource type="Script" uid="uid://cd46n4rcrxequ" path="res://scenes/item_slot.gd" id="1_v13n8"]
+
+[node name="ItemSlot" type="TextureRect" unique_id=209358655]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = -1
+anchor_right = 0.043
+anchor_bottom = 0.07700001
+offset_right = 0.4639969
+offset_bottom = 0.10399628
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("1_v13n8")

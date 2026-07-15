@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bimb5vba562pt"]
+
+[ext_resource type="Script" uid="uid://dh1hleluii6f7" path="res://components/inventory/inventory_component.gd" id="1_wk5bk"]
+
+[node name="InventoryComponent" type="Node2D" unique_id=2135973141]
+script = ExtResource("1_wk5bk")
