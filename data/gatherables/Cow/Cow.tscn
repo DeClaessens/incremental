@@ -9,7 +9,7 @@ region = Rect2(16, 160, 16, 16)
 filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25hu2"]
-size = Vector2(51, 47)
+size = Vector2(19, 16)
 
 [node name="GatherableVisualBase" unique_id=1056355337 instance=ExtResource("1_jranw")]
 
@@ -17,8 +17,8 @@ size = Vector2(51, 47)
 texture = SubResource("AtlasTexture_8yji4")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1988884281]
-position = Vector2(0.5, -0.5)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_25hu2")
 
 [node name="CollisionShape2D" parent="DetectionBox" parent_id_path=PackedInt32Array(877755836) index="0" unique_id=1222035826]
-scale = Vector2(3.2800004, 2.9200006)
+scale = Vector2(1.2, 1.2000017)

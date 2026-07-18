@@ -10,7 +10,6 @@ filter_clip = true
 [node name="GatherableVisualBase" type="StaticBody2D" unique_id=1119546423]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2010971739]
-scale = Vector2(3, 3)
 texture = SubResource("AtlasTexture_6q4g5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1988884281]

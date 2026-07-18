@@ -14,8 +14,8 @@ filter_clip = true
 texture = SubResource("AtlasTexture_qhfnu")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1988884281]
-position = Vector2(0, 23)
-scale = Vector2(2.1170492, 2.2702312)
+position = Vector2(0, 8)
+scale = Vector2(0.8368966, 0.8086694)
 
 [node name="CollisionShape2D" parent="DetectionBox" parent_id_path=PackedInt32Array(877755836) index="0" unique_id=1222035826]
-scale = Vector2(2.5999994, 5.119999)
+scale = Vector2(1.0494785, 1.827655)

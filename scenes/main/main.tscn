@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://ybmpm222vdqy" path="res://data/gatherables/Tree/tree.tres" id="5_6q06x"]
 [ext_resource type="Resource" uid="uid://dgtmuaex7li0b" path="res://data/gatherables/Mushroom/mushroom.tres" id="6_ow5a4"]
 [ext_resource type="Resource" uid="uid://0gmmkfmmwyrs" path="res://data/gatherables/Cow/cow.tres" id="7_hujxm"]
+[ext_resource type="Script" uid="uid://clv7bs4v7hnpc" path="res://scenes/main/camera_2d.gd" id="8_yyfjg"]
 
 [node name="Node2D" type="Node2D" unique_id=1378053686]
 script = ExtResource("1_iuonh")
@@ -14,16 +15,21 @@ script = ExtResource("1_iuonh")
 [node name="World" parent="." unique_id=685024287 instance=ExtResource("3_k2fmo")]
 
 [node name="Player" parent="." unique_id=94335809 instance=ExtResource("2_k2fmo")]
-position = Vector2(689, 201)
+position = Vector2(246, 69)
 
 [node name="Gatherable" parent="." unique_id=384069494 instance=ExtResource("4_l3cfh")]
-position = Vector2(780, 207)
+position = Vector2(295, 73)
 gatherableResource = ExtResource("5_6q06x")
 
 [node name="Gatherable2" parent="." unique_id=1782607159 instance=ExtResource("4_l3cfh")]
-position = Vector2(741, 271)
+position = Vector2(287, 123)
 gatherableResource = ExtResource("6_ow5a4")
 
 [node name="Gatherable3" parent="." unique_id=39523026 instance=ExtResource("4_l3cfh")]
-position = Vector2(589, 265)
+position = Vector2(231, 147)
 gatherableResource = ExtResource("7_hujxm")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=943992354 node_paths=PackedStringArray("target")]
+position = Vector2(250, 65)
+script = ExtResource("8_yyfjg")
+target = NodePath("../Player")
