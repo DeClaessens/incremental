@@ -10,23 +10,24 @@
 [ext_resource type="Script" uid="uid://clv7bs4v7hnpc" path="res://scenes/main/camera_2d.gd" id="8_yyfjg"]
 
 [node name="Node2D" type="Node2D" unique_id=1378053686]
+y_sort_enabled = true
 script = ExtResource("1_iuonh")
 
 [node name="World" parent="." unique_id=685024287 instance=ExtResource("3_k2fmo")]
 
 [node name="Player" parent="." unique_id=94335809 instance=ExtResource("2_k2fmo")]
-position = Vector2(246, 69)
+position = Vector2(101, 28)
 
 [node name="Gatherable" parent="." unique_id=384069494 instance=ExtResource("4_l3cfh")]
-position = Vector2(295, 73)
+position = Vector2(163, 30)
 gatherableResource = ExtResource("5_6q06x")
 
-[node name="Gatherable2" parent="." unique_id=1782607159 instance=ExtResource("4_l3cfh")]
-position = Vector2(287, 123)
+[node name="Gatherable2" parent="." unique_id=989072324 instance=ExtResource("4_l3cfh")]
+position = Vector2(112, 93)
 gatherableResource = ExtResource("6_ow5a4")
 
 [node name="Gatherable3" parent="." unique_id=39523026 instance=ExtResource("4_l3cfh")]
-position = Vector2(231, 147)
+position = Vector2(235, 81)
 gatherableResource = ExtResource("7_hujxm")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=943992354 node_paths=PackedStringArray("target")]
