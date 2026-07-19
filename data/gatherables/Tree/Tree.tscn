@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b1byi236kvpov"]
+
+[ext_resource type="PackedScene" uid="uid://bkipgi1m23dgq" path="res://scenes/gatherable/GatherableVisualBase.tscn" id="1_k7ldy"]
+[ext_resource type="Texture2D" uid="uid://xsdnjykakcei" path="res://public_assets/kenney_tiny-town/Tilemap/tilemap_packed.png" id="2_qhfnu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhfnu"]
+atlas = ExtResource("2_qhfnu")
+region = Rect2(64, 0, 16, 32)
+filter_clip = true
+
+[node name="GatherableVisualBase" unique_id=1119546423 instance=ExtResource("1_k7ldy")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=2010971739]
+texture = SubResource("AtlasTexture_qhfnu")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1988884281]
+position = Vector2(0, 8)
+scale = Vector2(0.8368966, 0.8086694)
+
+[node name="CollisionShape2D" parent="DetectionBox" parent_id_path=PackedInt32Array(877755836) index="0" unique_id=1222035826]
+scale = Vector2(1.0494785, 1.827655)

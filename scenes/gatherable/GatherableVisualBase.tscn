@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bkipgi1m23dgq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q4g5"]
+filter_clip = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eae6q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rh3xb"]
+
+[node name="GatherableVisualBase" type="StaticBody2D" unique_id=1119546423]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2010971739]
+texture = SubResource("AtlasTexture_6q4g5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1988884281]
+shape = SubResource("RectangleShape2D_eae6q")
+
+[node name="DetectionBox" type="Area2D" parent="." unique_id=877755836]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionBox" unique_id=1222035826]
+shape = SubResource("RectangleShape2D_rh3xb")

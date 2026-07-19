@@ -1,27 +1,39 @@
 [gd_scene format=3 uid="uid://67tcpy8eb4ly"]
 
 [ext_resource type="Script" uid="uid://d2cojpfftxt6" path="res://scenes/player/player.gd" id="1_c3xxp"]
-[ext_resource type="Texture2D" uid="uid://dp1lfgcdtru26" path="res://icon.svg" id="1_wr5hl"]
 [ext_resource type="PackedScene" uid="uid://4u2mdidnrcw5" path="res://components/movement_input/MovementInputComponent.tscn" id="2_4kuee"]
+[ext_resource type="Texture2D" uid="uid://dcsyh6h1q50ft" path="res://public_assets/kenney_tiny-farm/Tilemap/tilemap_packed.png" id="2_npwbq"]
 [ext_resource type="PackedScene" uid="uid://domf0eox5t28a" path="res://components/movement/MovementComponent.tscn" id="3_524rm"]
 [ext_resource type="Script" uid="uid://d2mrpahmwxn0l" path="res://scenes/player/character_stats.gd" id="3_tpg5x"]
 [ext_resource type="PackedScene" uid="uid://bimb5vba562pt" path="res://components/inventory/InventoryComponent.tscn" id="5_tpg5x"]
 [ext_resource type="PackedScene" uid="uid://w7k6y4pt0vnb" path="res://components/inventory_ui/InventoryUIComponent.tscn" id="7_npwbq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npwbq"]
+atlas = ExtResource("2_npwbq")
+region = Rect2(0, 144, 16, 16)
 
 [sub_resource type="Resource" id="Resource_6nll1"]
 script = ExtResource("3_tpg5x")
 metadata/_custom_type_script = "uid://d2mrpahmwxn0l"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eae6q"]
-size = Vector2(42, 42)
+size = Vector2(16, 16)
+
+[sub_resource type="Animation" id="Animation_npwbq"]
+resource_name = "walking"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v42im"]
+_data = {
+&"walking": SubResource("Animation_npwbq")
+}
 
 [node name="Player" type="CharacterBody2D" unique_id=385618123 node_paths=PackedStringArray("inventory_component")]
 script = ExtResource("1_c3xxp")
 inventory_component = NodePath("InventoryComponent")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1894765434]
-scale = Vector2(0.328125, 0.328125)
-texture = ExtResource("1_wr5hl")
+texture = SubResource("AtlasTexture_npwbq")
 
 [node name="InputComponent" parent="." unique_id=42552125 node_paths=PackedStringArray("character") instance=ExtResource("2_4kuee")]
 character = NodePath("..")
@@ -37,3 +49,6 @@ shape = SubResource("RectangleShape2D_eae6q")
 
 [node name="InventoryUiComponent" parent="." unique_id=1078114451 node_paths=PackedStringArray("inventory_component") instance=ExtResource("7_npwbq")]
 inventory_component = NodePath("../InventoryComponent")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1358385953]
+libraries/ = SubResource("AnimationLibrary_v42im")
