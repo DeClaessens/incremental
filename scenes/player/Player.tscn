@@ -17,7 +17,7 @@ script = ExtResource("3_tpg5x")
 metadata/_custom_type_script = "uid://d2mrpahmwxn0l"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eae6q"]
-size = Vector2(16, 16)
+size = Vector2(8.99762, 8)
 
 [sub_resource type="Animation" id="Animation_v42im"]
 length = 0.001
@@ -74,6 +74,7 @@ character_stats = SubResource("Resource_6nll1")
 character = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1945369672]
+position = Vector2(-0.48928997, 4)
 shape = SubResource("RectangleShape2D_eae6q")
 
 [node name="InventoryComponent" parent="." unique_id=2135973141 instance=ExtResource("5_tpg5x")]

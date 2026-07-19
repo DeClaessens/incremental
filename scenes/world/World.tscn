@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://7p0ap686omc4" path="res://tilesets/ground_tile_set.tres" id="1_5qbjp"]
 [ext_resource type="PackedScene" uid="uid://cpcyhy3gvss4b" path="res://scenes/islands/SmallIsland.tscn" id="2_6eebf"]
 [ext_resource type="PackedScene" uid="uid://bfkv1pw33ogdp" path="res://scenes/islands/BigIsland.tscn" id="3_gbddb"]
+[ext_resource type="PackedScene" uid="uid://055ydnsd8tgg" path="res://scenes/islands/SplitIsland.tscn" id="4_gbddb"]
 
 [node name="World" type="Node2D" unique_id=685024287]
 
@@ -11,6 +12,16 @@ tile_map_data = PackedByteArray("AAAAAAAAAgABAAIAAAAAAAEAAgABAAIAAAAAAAIAAgABAAI
 tile_set = ExtResource("1_5qbjp")
 
 [node name="Island" parent="." unique_id=1855842522 instance=ExtResource("2_6eebf")]
+position = Vector2(8, 8)
 
 [node name="Island2" parent="." unique_id=907955272 instance=ExtResource("3_gbddb")]
-position = Vector2(72, 0)
+position = Vector2(120, 0)
+
+[node name="Island3" parent="." unique_id=1075180411 instance=ExtResource("4_gbddb")]
+position = Vector2(304, 152)
+
+[node name="Island4" parent="." unique_id=700535897 instance=ExtResource("3_gbddb")]
+position = Vector2(40, 184)
+
+[node name="Island5" parent="." unique_id=901651372 instance=ExtResource("2_6eebf")]
+position = Vector2(344, 48)

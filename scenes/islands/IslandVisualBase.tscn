@@ -6,6 +6,3 @@
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=40446068]
 tile_set = ExtResource("1_1wew5")
-
-[node name="Buildings & Objects" type="TileMapLayer" parent="." unique_id=146607062]
-tile_set = ExtResource("1_1wew5")
