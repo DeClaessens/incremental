@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cpcyhy3gvss4b"]
 
-[ext_resource type="PackedScene" uid="uid://di2ousspwgyt0" path="res://scenes/islands/IslandVisualBase.tscn" id="1_xwvms"]
+[ext_resource type="PackedScene" uid="uid://di2ousspwgyt0" path="res://scenes/islands/Island.tscn" id="1_xwvms"]
 
 [node name="Island" unique_id=1855842522 instance=ExtResource("1_xwvms")]
 

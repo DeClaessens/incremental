@@ -3,34 +3,23 @@
 [ext_resource type="Script" uid="uid://dn2s1ulwjoh2t" path="res://scenes/main/main.gd" id="1_iuonh"]
 [ext_resource type="PackedScene" uid="uid://67tcpy8eb4ly" path="res://scenes/player/Player.tscn" id="2_k2fmo"]
 [ext_resource type="PackedScene" uid="uid://dods7pqbvu6y0" path="res://scenes/world/World.tscn" id="3_k2fmo"]
-[ext_resource type="PackedScene" uid="uid://ywfbuwi43o3m" path="res://scenes/gatherable/Gatherable.tscn" id="4_l3cfh"]
-[ext_resource type="Resource" uid="uid://ybmpm222vdqy" path="res://data/gatherables/Tree/tree.tres" id="5_6q06x"]
-[ext_resource type="Resource" uid="uid://dgtmuaex7li0b" path="res://data/gatherables/Mushroom/mushroom.tres" id="6_ow5a4"]
-[ext_resource type="Resource" uid="uid://0gmmkfmmwyrs" path="res://data/gatherables/Cow/cow.tres" id="7_hujxm"]
 [ext_resource type="Script" uid="uid://clv7bs4v7hnpc" path="res://scenes/main/camera_2d.gd" id="8_yyfjg"]
+[ext_resource type="PackedScene" uid="uid://bfkv1pw33ogdp" path="res://scenes/islands/BigIsland.tscn" id="9_b1x3f"]
 
 [node name="Node2D" type="Node2D" unique_id=1378053686]
 y_sort_enabled = true
 script = ExtResource("1_iuonh")
 
-[node name="World" parent="." unique_id=685024287 instance=ExtResource("3_k2fmo")]
-
-[node name="Player" parent="." unique_id=94335809 instance=ExtResource("2_k2fmo")]
-position = Vector2(453, 269)
-
-[node name="Gatherable" parent="." unique_id=384069494 instance=ExtResource("4_l3cfh")]
-position = Vector2(163, 30)
-gatherableResource = ExtResource("5_6q06x")
-
-[node name="Gatherable2" parent="." unique_id=989072324 instance=ExtResource("4_l3cfh")]
-position = Vector2(112, 93)
-gatherableResource = ExtResource("6_ow5a4")
-
-[node name="Gatherable3" parent="." unique_id=39523026 instance=ExtResource("4_l3cfh")]
-position = Vector2(235, 81)
-gatherableResource = ExtResource("7_hujxm")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=943992354 node_paths=PackedStringArray("target")]
 position = Vector2(250, 65)
 script = ExtResource("8_yyfjg")
 target = NodePath("../Player")
+
+[node name="World" parent="." unique_id=685024287 instance=ExtResource("3_k2fmo")]
+
+[node name="Player" parent="." unique_id=94335809 instance=ExtResource("2_k2fmo")]
+position = Vector2(88, 64)
+
+[node name="UnlockedIslands" type="Node2D" parent="." unique_id=414443771]
+
+[node name="Island" parent="UnlockedIslands" unique_id=1855842522 instance=ExtResource("9_b1x3f")]

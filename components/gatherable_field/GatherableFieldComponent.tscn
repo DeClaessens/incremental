@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://mwubrihtw4kc"]
+
+[ext_resource type="Script" uid="uid://cxk8poiiwq1k0" path="res://components/gatherable_field/gatherable_field_component.gd" id="1_xmvo8"]
+
+[node name="GatherableFieldComponent" type="Node2D" unique_id=1204447333]
+script = ExtResource("1_xmvo8")

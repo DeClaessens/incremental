@@ -5,9 +5,10 @@ extends CharacterBody2D
 @export var input_component: MovementInputComponent
 
 func _process(delta: float) -> void:
-	print(animation_player.current_animation)
-	
 	if input_component.is_moving:
 		animation_player.play("walking")
-	else:
-		animation_player.stop()
+
+	if animation_player.is_playing():
+		if not input_component.is_moving:
+			animation_player.stop()
+

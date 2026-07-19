@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://di2ousspwgyt0"]
+
+[ext_resource type="TileSet" uid="uid://7p0ap686omc4" path="res://tilesets/ground_tile_set.tres" id="1_1wew5"]
+[ext_resource type="Script" uid="uid://p446khqqw5mb" path="res://scenes/islands/island.gd" id="1_2lt5k"]
+[ext_resource type="PackedScene" uid="uid://tbct2stk4o77" path="res://components/spawn/SpawnComponent.tscn" id="3_q6pq1"]
+[ext_resource type="PackedScene" uid="uid://mwubrihtw4kc" path="res://components/gatherable_field/GatherableFieldComponent.tscn" id="4_p66ks"]
+
+[node name="Island" type="Node2D" unique_id=1855842522]
+script = ExtResource("1_2lt5k")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=40446068]
+tile_set = ExtResource("1_1wew5")
+
+[node name="SpawnComponent" parent="." unique_id=1672172910 node_paths=PackedStringArray("gatherable_field_component") instance=ExtResource("3_q6pq1")]
+gatherable_field_component = NodePath("../GatherableFieldComponent")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=900308247]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1316746517]
+
+[node name="GatherableFieldComponent" parent="." unique_id=1204447333 node_paths=PackedStringArray("tile_map_layer") instance=ExtResource("4_p66ks")]
+capacity = 1
+tile_map_layer = NodePath("../Ground")
