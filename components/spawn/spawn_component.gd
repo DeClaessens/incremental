@@ -14,18 +14,24 @@ func _ready() -> void:
 		print('No resources have been configured for this component')
 		return;
 
-	gatherable_field_component.capacity_changed.connect(_on_capacity_changed)
 	timer.timeout.connect(_on_timer_timeout)
 
-func _on_capacity_changed(has_capacity: bool) -> void:
-	if has_capacity and timer.is_stopped():
-		return timer.start()
-	
-	if not has_capacity:
-		return timer.stop()
+	_check_and_start_timer()
+
 	
 func _on_timer_timeout() -> void:
+	if not gatherable_field_component.has_capacity():
+		timer.stop()
+		return
+
 	var instance: Gatherable = GATHERABLE_NODE.instantiate()
 	var resource = gatherable_resources.pick_random()
 	instance.gatherable_resource = resource
+
+	instance.tree_exited.connect(_check_and_start_timer)
+
 	gatherable_field_component.spawn_gatherable(instance)
+
+func _check_and_start_timer() -> void:
+	if gatherable_field_component.has_capacity() and timer.is_stopped():
+		timer.start()
