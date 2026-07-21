@@ -2,17 +2,20 @@ class_name SpawnComponent
 extends Node2D
 
 @export var gatherable_field_component: GatherableFieldComponent
+@export var gatherable_resources: Array[GatherableResource]
+
 @onready var timer: Timer = $Timer
 
-const gatherable_node:= preload('res://scenes/gatherable/Gatherable.tscn')
-const tree_resource: GatherableResource = preload('res://data/gatherables/Tree/tree.tres')
+const GATHERABLE_NODE:= preload('res://scenes/gatherable/Gatherable.tscn')
+
 
 func _ready() -> void:
-	timer.timeout.connect(_on_timer_timeout)
+	if (not gatherable_resources.is_empty()):
+		timer.timeout.connect(_on_timer_timeout)
 
 func _on_timer_timeout() -> void:
 	if (gatherable_field_component.has_capacity()):
-		var instance: Gatherable = gatherable_node.instantiate()
-		
-		instance.gatherable_resource = tree_resource
+		var instance: Gatherable = GATHERABLE_NODE.instantiate()
+		var resource = gatherable_resources.pick_random()
+		instance.gatherable_resource = resource
 		gatherable_field_component.spawn_gatherable(instance)

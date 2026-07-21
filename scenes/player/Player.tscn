@@ -58,7 +58,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=385618123 node_paths=PackedStringArray("inventory_component", "input_component")]
-skew = 0.0023799923
+skew = 0
 script = ExtResource("1_c3xxp")
 inventory_component = NodePath("InventoryComponent")
 input_component = NodePath("MovementInputComponent")
