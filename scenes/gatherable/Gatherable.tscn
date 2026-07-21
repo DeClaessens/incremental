@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://jcei30c6p2dt" path="res://components/resources/ResourcesComponent.tscn" id="2_7x6od"]
 [ext_resource type="PackedScene" uid="uid://8oxweyt2ln5i" path="res://components/harvestable/HarvestableComponent.tscn" id="5_741qs"]
 
-[node name="Gatherable" type="Node2D" unique_id=1782607159 node_paths=PackedStringArray("harvestableComponent", "resourceComponent")]
+[node name="Gatherable" type="Node2D" unique_id=1782607159 node_paths=PackedStringArray("harvestable_component", "resource_component")]
 script = ExtResource("1_exqdy")
-harvestableComponent = NodePath("HarvestableComponent")
-resourceComponent = NodePath("ResourceComponent")
+harvestable_component = NodePath("HarvestableComponent")
+resource_component = NodePath("ResourceComponent")
 
 [node name="ResourceComponent" parent="." unique_id=2000883103 instance=ExtResource("2_7x6od")]
 

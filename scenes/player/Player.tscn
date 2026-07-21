@@ -17,25 +17,56 @@ script = ExtResource("3_tpg5x")
 metadata/_custom_type_script = "uid://d2mrpahmwxn0l"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eae6q"]
-size = Vector2(16, 16)
+size = Vector2(8.99762, 8)
+
+[sub_resource type="Animation" id="Animation_v42im"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_npwbq"]
 resource_name = "walking"
-length = 2.0
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.19999999, 0.3, 0.39999998),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.88, 1.1), Vector2(1.08, 1), Vector2(1.062, 0.9), Vector2(1, 0.893)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v42im"]
 _data = {
+&"RESET": SubResource("Animation_v42im"),
 &"walking": SubResource("Animation_npwbq")
 }
 
-[node name="Player" type="CharacterBody2D" unique_id=385618123 node_paths=PackedStringArray("inventory_component")]
+[node name="Player" type="CharacterBody2D" unique_id=385618123 node_paths=PackedStringArray("inventory_component", "input_component")]
+skew = 0
 script = ExtResource("1_c3xxp")
 inventory_component = NodePath("InventoryComponent")
+input_component = NodePath("MovementInputComponent")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1894765434]
 texture = SubResource("AtlasTexture_npwbq")
 
-[node name="InputComponent" parent="." unique_id=42552125 node_paths=PackedStringArray("character") instance=ExtResource("2_4kuee")]
+[node name="MovementInputComponent" parent="." unique_id=42552125 node_paths=PackedStringArray("character") instance=ExtResource("2_4kuee")]
 character = NodePath("..")
 character_stats = SubResource("Resource_6nll1")
 
@@ -43,6 +74,7 @@ character_stats = SubResource("Resource_6nll1")
 character = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1945369672]
+position = Vector2(-0.48928997, 4)
 shape = SubResource("RectangleShape2D_eae6q")
 
 [node name="InventoryComponent" parent="." unique_id=2135973141 instance=ExtResource("5_tpg5x")]

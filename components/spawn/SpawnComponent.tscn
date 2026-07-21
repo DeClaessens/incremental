@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://tbct2stk4o77"]
+
+[ext_resource type="Script" uid="uid://ir7snqp6pjuc" path="res://components/spawn/spawn_component.gd" id="1_k8nfp"]
+
+[node name="SpawnComponent" type="Node2D" unique_id=1672172910]
+script = ExtResource("1_k8nfp")
+
+[node name="Timer" type="Timer" parent="." unique_id=2079047632]
+autostart = true
