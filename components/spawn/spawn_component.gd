@@ -25,7 +25,7 @@ func _on_timer_timeout() -> void:
 	var instance: Gatherable = GATHERABLE_NODE.instantiate()
 	var resource = gatherable_resources.pick_random()
 	instance.gatherable_resource = resource
-	print('_on_timer_timeout')
+	
 	gatherable_field_component.spawn_gatherable(instance)
 
 func _check_and_start_timer() -> void:

@@ -2,13 +2,15 @@ class_name GatherableFieldComponent
 extends Node2D
 
 var _active_gatherables: Array[Gatherable] = []
+var entity_layer: Node2D
 @export var capacity: int = 0
 @export var tile_map_layer: TileMapLayer
 
 signal capacity_freed
 
-func _get_entity_layer() -> Node2D:
-	return get_tree().get_first_node_in_group("entity_layer")
+func _ready() -> void:
+	entity_layer = get_tree().get_first_node_in_group("entity_layer") as Node2D
+	assert(entity_layer != null, "No node in group 'entity_layer'")
 
 func _is_cell_spawnable(cell: Vector2i) -> bool:
 	return tile_map_layer.get_cell_tile_data(cell).get_custom_data('spawnable_ground')
@@ -30,7 +32,7 @@ func spawn_gatherable(instance: Gatherable):
 	var cell: Vector2i = spawnable_cells.pick_random()
 	
 	instance.tree_exited.connect(_on_gatherable_removed.bind(instance))
-	_get_entity_layer().add_child(instance)
+	entity_layer.add_child(instance)
 
 	instance.global_position = tile_map_layer.to_global(tile_map_layer.map_to_local(cell))
 	_active_gatherables.append(instance)
