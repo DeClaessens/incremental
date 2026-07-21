@@ -6,4 +6,3 @@
 script = ExtResource("1_k8nfp")
 
 [node name="Timer" type="Timer" parent="." unique_id=2079047632]
-autostart = true

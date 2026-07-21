@@ -10,17 +10,17 @@ func _is_cell_spawnable(cell: Vector2i) -> bool:
 func _define_spawnable_cells() -> Array[Vector2i]:
 	return tile_map_layer.get_used_cells().filter(_is_cell_spawnable)
 #this function is not taking into account whether a cell spawned oin it or not
-func get_random_spawn_position(cells) -> Vector2:	
+func _get_random_spawn_position(cells) -> Vector2:	
 	return tile_map_layer.map_to_local(cells.pick_random())
 
+# Tracks field capacity and emits event
 func has_capacity() -> bool:
-	return self.get_child_count() < capacity
+	return self.get_child_count() < capacity and not _define_spawnable_cells().is_empty()
 
 func spawn_gatherable(instance: Gatherable):
 	var spawnable_cells = _define_spawnable_cells()
-	if (spawnable_cells.size() == 0):
+	if spawnable_cells.is_empty():
 		return
-
-	instance.position = get_random_spawn_position(spawnable_cells)
+	instance.position = _get_random_spawn_position(spawnable_cells)
 
 	self.add_child(instance)
